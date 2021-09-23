@@ -1,0 +1,102 @@
+html{
+    font-size: 62.5%; /*Default font is 16 px. 16x62.5=10px */
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    font-size: 1.6rem;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/*Layout*/
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+header{
+    grid-area: header;
+    background-color: #6345ce;
+}
+main{
+    grid-area: main;
+    padding: 1rem;
+}
+footer{
+    grid-area: footer;
+    background-color: #6345ce;
+    color: #da86c5;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/*common */
+h1{
+    font: size 1.8rem;
+    padding: 1 rem 0;
+}
+h2:hover{
+    color:aqua;
+}
+h2{
+    color:#45CE63;
+    font-size: 2.7rem;
+    padding: 0rem 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #c5da86
+}
+/* Header */
+header a{
+    color: #da86c5;
+    padding: 1rem;
+}
+a.brand{
+    color: #da86c5;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.row.center{
+    justify-content: center;
+}
+/* Images */
+img{
+    border-radius: 0.5rem;
+}
+img.medium {
+    max-width: 29rem;
+    width: 100%;
+}
+/* Card */
+.card{
+    border: 0.1rem #c0c0c0 solid;
+    background-color: #f8f8f8;
+    border-radius: 0.5 rem;
+    margin: 1rem;
+}
+.card-body{
+    padding: 1rem;
+}
+.card-body >*{
+    margin-bottom: 0.5rem;
+}
+.price{
+    font-size: .1.5rem;
+}
+/* Rating */
+.rating span{
+    color: #da86c5;
+    margin:0rem;
+}
