@@ -28,6 +28,8 @@ body{
 header{
   grid-area: header;
   background-color: #6345ce;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 main{
   grid-area: main;
@@ -98,11 +100,17 @@ img.medium {
   margin-bottom: 0.5rem;
 }
 .price{
-  font-size: .1.5rem;
+  font-size: 2.0rem;
+  font-weight: bold;
 }
 /* Rating */
 .rating span{
   color: #da86c5;
-  margin:0rem;
+  margin:.0rem;
+  padding: .25rem;
+}
+.rating span:last-child{
+  color: #404040;
+  font-weight: bold;
 }
 
