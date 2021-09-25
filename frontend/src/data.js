@@ -18,7 +18,7 @@ const data ={
             image:'/images/Emilia_sexy.jpg',
             price: 2199.95,
             brand: 'Re:Zero',
-            rating: 2.5,
+            rating: 2.6,
             numReviews: 2,
             description: 'Will literally leave you to die.',
         },

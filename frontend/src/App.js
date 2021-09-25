@@ -21,8 +21,7 @@ function App() {
           {data.product.map(product =>(
             <Product key={product.id} product={product}></Product>           
             ))
-          }
-            }
+          } 
         </div>
         </div>
     </main>
