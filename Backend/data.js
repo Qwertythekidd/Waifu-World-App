@@ -1,19 +1,33 @@
+import bcrypt from 'bcryptjs'
 const data ={
+   users: [
+    {
+      name: 'Chad',
+      email: 'Chadman@bigdickenergy.com',
+      password: bcrypt.hashSync('4321', 8),
+      isAdmin: true,
+    },
+    {
+        name:'Simp',
+        email: 'simpbux@noballs.com',
+        password: bcrypt.hashSync('1234', 8),
+        isAdmin: false,
+    }
+    ],
+
     products:[
         {
-            _id:'1',
             name:'Kaho Hinata',
             category:'tsundere',
             image:'/images/waifu.jpg',
             price: 9989.99,
-            countInStock: 10,
+            countInStock: 1075,
             brand: 'BlendS',
             rating: 5,
             numReviews: 15,
             description: 'Cute gamer girl',
         },
         {
-            _id:'2',
             name:'Emilia',
             category:'Innocent',
             image:'/images/Emilia_sexy.jpg',
@@ -25,19 +39,17 @@ const data ={
             description: 'Will literally leave you to die.',
         },
         {
-            _id:'3',
             name:'Mimosa',
             category:'Innocent',
             image:'/images/mimosa.jpg',
             price: 28499.99,
-            countInStock: 30,
+            countInStock: 10,
             brand: 'Black Clover',
             rating: 4.5,
             numReviews: 2200.00,
             description: 'Innocent',
         },
         {
-            _id:'4',
             name:'Rem',
             category:'Violent',
             image:'/images/Rem.jpg',
@@ -49,7 +61,6 @@ const data ={
             description: 'Demon-Girl-Discount. The thinking mans gril',
         },
         {
-            _id:'5',
             name:'Revy',
             category:'Violent',
             image:'/images/Revy.jpg',
@@ -61,7 +72,6 @@ const data ={
             description: 'Does not disappoint',
         },
         {
-            _id:'6',
             name:'Makoto',
             category:'Wholesome',
             image:'/images/Makoto.jpg',
@@ -73,7 +83,6 @@ const data ={
             description: 'Cant see but will lead you to a wholesome future',
         },
         {
-            _id:'7',
             name:'Misato',
             category:'Violent',
             image:'/images/misato.jpg',
