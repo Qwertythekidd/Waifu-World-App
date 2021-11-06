@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import {signout} from './actions/userActions';
-import AdminRoute from './components/AdminRoute';
 import PrivateRoute from './components/PrivateRoute';
 import CartScreen from './Screens/CartScreen';
 import HomeScreen from './Screens/HomeScreen';
@@ -11,12 +10,10 @@ import OrderScreen from './Screens/OrderScreen';
 import SigninScreen from './Screens/signinScreen';
 import RegisterScreen from './Screens/RegisterScreen';
 import ProductScreen from './Screens/ProductScreen';
-import ProductListScreen from './Screens/ProductListScreen';
 import ProfileScreen from './Screens/ProfileScreen';
 import PaymentMethodScreen from './Screens/PaymentMethodScreen';
 import PlaceOrderScreen from './Screens/PlaceOrderScreen';
 import ShippingAddressScreen from './Screens/ShippingAddressScreen';
-import ProductEditScreen from './Screens/ProductEditScreen';
 
 function App() {
   const cart = useSelector(state => state.cart);
@@ -74,6 +71,7 @@ function App() {
                   <li>
                     <Link to="/dashboard">Dashboard</Link>
                   </li>
+
                   <li>
                     <Link to="/productlist">Products</Link>
                   </li>
@@ -90,12 +88,7 @@ function App() {
         </header>
         <main>
           <Route path="/cart/:id?" component={CartScreen}></Route>
-          <Route path="/product/:id" component={ProductScreen} exact></Route>
-          <Route 
-            path="/product/:id/edit" 
-            component={ProductEditScreen} 
-            exact
-          ></Route>
+          <Route path="/product/:id" component={ProductScreen}></Route>
           <Route path="/signin" component ={SigninScreen}></Route>
           <Route path="/register" component ={RegisterScreen}></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
@@ -106,10 +99,6 @@ function App() {
           <PrivateRoute 
             path="/profile" component={ProfileScreen}
           ></PrivateRoute>
-          <AdminRoute 
-            path="/productlist" 
-            component={ProductListScreen}
-          ></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
@@ -117,5 +106,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;
