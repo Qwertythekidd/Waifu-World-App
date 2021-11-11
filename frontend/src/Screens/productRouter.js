@@ -13,7 +13,6 @@ productRouter.get(
 		res.send(products);
 	})
 );
-
 productRouter.get(
 	'/seed', 
 	expressAsyncHandler(async(req, res) =>{
