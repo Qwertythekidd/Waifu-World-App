@@ -6,6 +6,14 @@ const data ={
       email: 'Chadman@bigdickenergy.com',
       password: bcrypt.hashSync('4321', 8),
       isAdmin: true,
+      isSeller: true,
+      seller:{
+        name: 'Chad',
+        logo: '/images/waifu.jpg',
+        description: 'Coolest Dude',
+        rating: 5,
+        numReviews: 120,
+      },
     },
     {
         name:'Simp',
